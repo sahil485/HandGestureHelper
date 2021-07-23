@@ -45,7 +45,6 @@ while True:
 
     if decision == 1:
         mouse.scroll(0,0.5)
-        cv2.putText(monoFrame, "thumbUp", (20,20), cv2.FONT_HERSHEY_SIMPLEX, 3, (255,0,255), 10)
         print("thumbUp")
     elif decision == 2:
         mouse.scroll(0,-0.5)
