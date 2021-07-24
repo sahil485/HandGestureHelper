@@ -13,7 +13,7 @@ from tensorflow.keras.callbacks import Callback
 
 class Callback(Callback): #callback class from predefined keras superclass: stops training once accuracy is 95%
     def on_epoch_end(self, epochs, logs={}):
-        if(logs.get('accuracy') > 0.9):
+        if(logs.get('auc') > 0.95):
             self.model.stop_training = True
 
 def network(trainingDat, valDat, trainingLab = None, testDat = None, testLab = None):
@@ -24,6 +24,7 @@ def network(trainingDat, valDat, trainingLab = None, testDat = None, testLab = N
         Dropout(0.3),
         Conv2D(32, (3,3), activation = tf.nn.relu),
         MaxPooling2D(2,2),
+        Dropout(0.3),
         Conv2D(32, (3, 3), activation=tf.nn.relu),
         Dropout(0.3),
         Conv2D(64, (3,3), activation = tf.nn.relu),
@@ -32,17 +33,22 @@ def network(trainingDat, valDat, trainingLab = None, testDat = None, testLab = N
         MaxPooling2D(2,2),
         Flatten(),
         Dense(100, activation = tf.nn.relu),
-        Dense(3, activation = tf.nn.softmax) #softmax activation due to the desired action of multiclass classification
+        Dense(4, activation = tf.nn.softmax) #softmax activation due to the desired action of multiclass classification
     ])
-
-    network.compile(optimizer = tf.keras.optimizers.RMSprop(learning_rate=0.0001), loss = 'categorical_crossentropy',metrics = ['accuracy']) #compiles and starts learning of the network
+    AUC = tf.keras.metrics.AUC(
+    num_thresholds=200, curve='ROC',
+    summation_method='interpolation', name=None, dtype=None,
+    thresholds=None, multi_label=False, num_labels=None, label_weights=None,
+    from_logits=False
+)
+    network.compile(optimizer = tf.keras.optimizers.RMSprop(learning_rate=0.0001), loss = 'categorical_crossentropy',metrics = AUC) #compiles and starts learning of the network
     network.fit(trainingDat, epochs = 30, callbacks = [CallbackTraining], validation_data=valDat)
     return network
 
-train_data_dir = r"images\blackandwhite"
+train_data_dir = r"images"
 
 train_datagen = ImageDataGenerator(
-    width_shift_range=20,
+    width_shift_range=6,
     rotation_range= 30,
     fill_mode= 'nearest',
     zoom_range=0.4,
@@ -66,5 +72,5 @@ validation_generator = train_datagen.flow_from_directory(
 
 
 Network = network(train_generator, validation_generator)
-Network.save("gestures_modelv4")
+Network.save("gestures_modelv6")
 
