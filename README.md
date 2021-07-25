@@ -8,8 +8,6 @@ Currently supports following functionalities with high accuracy:
 
 ![Example Thumb Up](../master/images/thumb/thumb0.png)
 
-<img src="/master/images/thumb/thumb0.png" alt="My cool logo"/>
-
 2) Thumb down - scroll down
 
 ![Example Thumb Down](../master/images/thumbD/thumDb0.png)
