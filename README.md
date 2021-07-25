@@ -6,11 +6,14 @@ Currently supports following functionalities with high accuracy:
 
 1) Thumb up - scroll up
 
-![Optional Text](../master/images/thumb/thumb0.png)
+![Example Thumb Up](../master/images/thumb/thumb0.png)
 
 
-3) Thumb down - scroll down
+2) Thumb down - scroll down
+
+![Example Thumb Down](../master/images/thumbD/thumDb0.png)
 
 
+3) Signal forward - change tab to the right (ctrl-tab)
 
-5) Signal forward - change tab to the right (ctrl-tab)
+![Example Signal Forward](../master/images/forward/for0.png)
