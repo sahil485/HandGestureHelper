@@ -4,15 +4,16 @@ Repository made as a self-challenge based on a Slingshot Open Source Sunday (OSS
 
 Currently supports following functionalities with high accuracy:
 
-1) Thumb up - scroll up
+1) Scroll Up
 
-![Example Thumb Up](../master/images/thumb/thumb0.png)
+![](https://user-images.githubusercontent.com/46851548/126888152-1abc985d-cc6d-4c88-97b7-d87020be8ba0.png)
 
-2) Thumb down - scroll down
+2) Scroll Down
 
-![Example Thumb Down](../master/images/thumbD/thumDb0.png)
+![](https://user-images.githubusercontent.com/46851548/126888161-146afcef-6649-4e61-b29b-4c204e714158.png)
+
+3) Switch Tabs Forward (ctrl+tab)
+
+![](https://user-images.githubusercontent.com/46851548/126888164-73f539ca-7d78-4100-9b02-5aa547be5dad.png)
 
 
-3) Signal forward - change tab to the right (ctrl-tab)
-
-![Example Signal Forward](../master/images/forward/for0.png)
