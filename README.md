@@ -6,7 +6,7 @@ Currently supports following functionalities with high accuracy:
 
 1) Thumb up - scroll up
 
-![alt text](http://user-images.githubusercontent.com/46851548/126887924-8c4838f0-0800-4d06-8bb7-f06224ed51da.png(https://user-images.githubusercontent.com/46851548/126887924-8c4838f0-0800-4d06-8bb7-f06224ed51da.png)
+![Optional Text](../master/images/thumb/thumb0.png)
 
 
 3) Thumb down - scroll down
