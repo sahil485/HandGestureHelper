@@ -7,6 +7,7 @@ Currently supports following functionalities with high accuracy:
 1) Thumb up - scroll up
 
 ![Example Thumb Up](../master/images/thumb/thumb0.png)
+!(https://user-images.githubusercontent.com/46851548/126888008-9318f344-a913-450f-a9e8-c1951ae0871b.png)
 
 
 2) Thumb down - scroll down
